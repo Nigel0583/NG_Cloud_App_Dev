@@ -1,0 +1,67 @@
+/* Ionic Variables and Theming:
+http://ionicframework.com/docs/theming/ */
+
+/** Ionic CSS Variables **/
+:root {
+    /** font **/
+    --ion-font-family: 'Roboto', sans-serif;
+
+    /** primary **/
+    --ion-color-primary: #f9ae5c;
+    --ion-color-primary-contrast: #ffffff;
+
+
+    /** medium **/
+    --ion-color-medium: #e4812f;
+    --ion-color-medium-contrast: #ffffff;
+
+
+    /** light **/
+    --ion-color-light: #e4812f;
+    --ion-color-light-shade: #d7d8da;
+    --ion-color-light-tint: #f5f6f9;
+
+    --ion-border-color: #f4f5f8;
+
+    --ion-toolbar-background: #ffffff;
+
+    --ion-tab-bar-background: #28292f;
+}
+
+
+/* SEGMENT */
+
+ion-segment-button {
+    --indicator-color: var(--ion-color-primary);
+}
+
+
+
+/* TAB */
+
+ion-tab-button {
+}
+
+ion-card-content {
+    color: #f9ae5c;
+}
+
+ion-tab-button.tab-selected ion-icon {
+    color: var(--ion-color-primary);
+}
+
+/* LIST */
+
+ion-list-header {
+    font-weight: 700;
+}
+
+ion-list-header::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: var(--ion-color-primary);
+    top: 45px;
+    position: absolute;
+    width: 32px;
+}

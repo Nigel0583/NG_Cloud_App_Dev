@@ -1,0 +1,15 @@
+{
+  "appId": "net.t00199278.app",
+  "appName": "t00199278",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "android": {
+    "backgroundColor": "#a6a6ad"
+  }
+}
