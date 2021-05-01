@@ -68,7 +68,9 @@ const App: React.FC = () => {
                             <IonIcon icon={calendarOutline}/>
                             <IonLabel>Schedule</IonLabel>
                         </IonTabButton>
-                        <AmplifySignOut/>
+                        <IonTabButton>
+                            <AmplifySignOut/>
+                        </IonTabButton>
                     </IonTabBar>
                     <IonRouterOutlet>
                         <Route path="/latest" component={Latest}/>
