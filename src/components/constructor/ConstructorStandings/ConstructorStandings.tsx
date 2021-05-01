@@ -49,7 +49,7 @@ const ConstructorStandings: React.FC = () => {
           <div className="standings-position ion-text-center font-weight-bold ion-margin-end">
             {constructor.position}.
           </div>
-          <IonIcon lazy className="constructor-logo ion-margin-end" src={`assets/img/constructors/${constructor.Constructor.constructorId}.svg`}/>
+          <IonIcon lazy className="constructor-logo ion-margin-end" src={`https://bucketofflags103632-staging.s3.amazonaws.com/constructors/${constructor.Constructor.constructorId}.svg`}/>
           <IonLabel>
             <h3 className="font-weight-bold ion-text-uppercase">{constructor.Constructor.name}</h3>
             <p>

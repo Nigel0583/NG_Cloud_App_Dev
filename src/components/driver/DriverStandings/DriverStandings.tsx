@@ -44,7 +44,7 @@ const DriverStandings: React.FC = () => {
           <div className="standings-position ion-text-center font-weight-bold ion-margin-end">
             {driver.position}.
           </div>
-          <IonIcon lazy className="constructor-logo ion-margin-end" src={`assets/img/constructors/${driver.Constructors[0].constructorId}.svg`}/>
+          <IonIcon lazy className="constructor-logo ion-margin-end" src={`https://bucketofflags103632-staging.s3.amazonaws.com/constructors/${driver.Constructors[0].constructorId}.svg`}/>
           <IonLabel>
             <h3>{driver.Driver.givenName} <strong className="ion-text-uppercase">{driver.Driver.familyName}</strong></h3>
             <p>{driver.Constructors[0].name}</p>
