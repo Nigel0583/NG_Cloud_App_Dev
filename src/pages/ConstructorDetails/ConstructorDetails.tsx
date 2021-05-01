@@ -38,7 +38,7 @@ const ConstructorDetails: React.FC<ConstructorDetailsProps> = ({match}) => {
           <IonContent>
             <IonList lines="full">
               <IonItem>
-                <IonIcon lazy slot="start" size="large" className="constructor" src={`assets/img/constructors/${constructor.ConstructorStandings[0].Constructor.constructorId}.svg`}/>
+                <IonIcon lazy slot="start" size="large" className="constructor" src={`https://bucketofflags103632-staging.s3.amazonaws.com/constructors/${constructor.ConstructorStandings[0].Constructor.constructorId}.svg`}/>
                 <IonLabel>
                   <p>Team</p>
                   <h2 className="font-weight-bold">{constructor.ConstructorStandings[0].Constructor.name}</h2>
@@ -57,7 +57,7 @@ const ConstructorDetails: React.FC<ConstructorDetailsProps> = ({match}) => {
                     <h2 className="font-weight-bold ion-text-uppercase">{driver.familyName}</h2>
                   </IonLabel>
                   <IonThumbnail slot="end" className="country-thumbnail">
-                    <IonImg src={`assets/img/flags/${driver.nationality}.svg`} alt={driver.nationality}/>
+                    <IonImg src={`https://bucketofflags103632-staging.s3.amazonaws.com/flags/${driver.nationality}.svg`} alt={driver.nationality}/>
                   </IonThumbnail>
                 </IonItem>
               )}

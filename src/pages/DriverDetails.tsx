@@ -33,9 +33,10 @@ const DriverDetails: React.FC<DriverDetailsProps> = ({match}) => {
           <IonContent>
             <IonList lines="full">
               <IonItem>
-                <IonThumbnail slot="start" className="circuit-country-thumbnail ion-margin-end">
-                  <IonImg src={`assets/img/flags/${driver.DriverStandings[0].Driver.nationality}.svg`} alt={driver.DriverStandings[0].Driver.nationality}/>
+                <IonThumbnail slot="start" >
+                  <IonImg src={`https://bucketofflags103632-staging.s3.amazonaws.com/flags/${driver.DriverStandings[0].Driver.nationality}.svg`} alt={driver.DriverStandings[0].Driver.nationality}/>
                 </IonThumbnail>
+
                 <IonLabel>
                   <p>{driver.DriverStandings[0].Driver.givenName}</p>
                   <h2 className="font-weight-bold ion-text-uppercase">{driver.DriverStandings[0].Driver.familyName}</h2>
@@ -49,7 +50,7 @@ const DriverDetails: React.FC<DriverDetailsProps> = ({match}) => {
                 <IonLabel>
                   <h2 className="font-weight-bold">{driver.DriverStandings[0].Constructors[0].name}</h2>
                 </IonLabel>
-                <IonIcon lazy slot="end" size="large" className="constructor" src={`assets/img/constructors/${driver.DriverStandings[0].Constructors[0].constructorId}.svg`}/>
+                <IonIcon lazy slot="end" size="large" className="constructor" src={`https://bucketofflags103632-staging.s3.amazonaws.com/constructors/${driver.DriverStandings[0].Constructors[0].constructorId}.svg`}/>
               </IonItem>
             </IonList>
             <Seasons driverId={match.params.driverId} />

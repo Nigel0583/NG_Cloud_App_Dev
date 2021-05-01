@@ -5,7 +5,6 @@ import {
     IonLabel,
     IonThumbnail,
     IonList,
-    IonIcon,
     IonCard,
     IonCardContent,
     IonImg
@@ -54,7 +53,7 @@ const Circuit: React.FC<{ season: string, round: string, circuit: string }> = ({
         <>
             <IonItem lines="none" className="ion-margin-top">
                 <IonThumbnail slot="start">
-                    <IonImg src={`assets/img/flags/${race.Circuit.Location.country.replace(' ', '_')}.svg`}
+                    <IonImg src={`https://bucketofflags103632-staging.s3.amazonaws.com/flags/${race.Circuit.Location.country.replace(' ', '_')}.svg`}
                             alt={race.Circuit.Location.country}/>
                 </IonThumbnail>
                 <IonLabel>
@@ -68,7 +67,7 @@ const Circuit: React.FC<{ season: string, round: string, circuit: string }> = ({
             <p  className=" ion-padding ion-text-left">{description}</p>
             <IonCard className="track-card">
                 <IonCardContent>
-                    <IonIcon className="track ion-padding" src={`assets/img/tracks/${race.Circuit.circuitId}.svg`}/>
+                    <IonImg className="track ion-padding" src={`https://bucketofflags103632-staging.s3.amazonaws.com/tracks/${race.Circuit.circuitId}.svg`}/>
                 </IonCardContent>
             </IonCard>
 
