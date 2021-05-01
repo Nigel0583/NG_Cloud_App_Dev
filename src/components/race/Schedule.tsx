@@ -3,7 +3,7 @@ import { IonList, IonListHeader, IonItem, IonLabel, IonBadge, IonSkeletonText, I
 import { useHistory } from 'react-router';
 import { Race } from '../../models';
 import '@capacitor-community/http';
-import { Plugins } from '@capacitor/core';
+import {Plugins} from "@capacitor/core";
 
 export interface RaceSession {
   name:      string;

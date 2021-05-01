@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyfcdb2361c44a4-staging-103632-authRole",
+      "UnauthRoleArn": "arn:aws:iam::640571682937:role/amplify-amplifyfcdb2361c44a4-staging-103632-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::640571682937:role/amplify-amplifyfcdb2361c44a4-staging-103632-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplifyfcdb2361c44a4-staging-103632-deployment",
+      "UnauthRoleName": "amplify-amplifyfcdb2361c44a4-staging-103632-unauthRole",
+      "StackName": "amplify-amplifyfcdb2361c44a4-staging-103632",
+      "StackId": "arn:aws:cloudformation:us-east-1:640571682937:stack/amplify-amplifyfcdb2361c44a4-staging-103632/190c8130-aa69-11eb-a37b-0a773b285c67",
+      "AmplifyAppId": "d2onlglx9pqos1"
+    },
+    "categories": {
+      "auth": {
+        "NGCloudAppDev": {}
+      }
+    }
+  }
+}
