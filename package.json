@@ -3,6 +3,7 @@
   "description": "Formula 1 data",
   "version": "1.0.0",
   "dependencies": {
+    "@aws-amplify/cli": "^4.50.0",
     "@aws-amplify/ui-react": "^1.0.7",
     "@capacitor-community/http": "^0.3.0",
     "@capacitor/core": "^2.4.7",
