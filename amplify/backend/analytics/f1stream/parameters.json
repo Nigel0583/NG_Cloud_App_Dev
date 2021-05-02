@@ -1,0 +1,12 @@
+{
+  "kinesisStreamName": "f1stream",
+  "kinesisStreamShardCount": 1,
+  "authRoleName": {
+    "Ref": "AuthRoleName"
+  },
+  "unauthRoleName": {
+    "Ref": "UnauthRoleName"
+  },
+  "authPolicyName": "kinesis_amplify_8558c379",
+  "unauthPolicyName": "kinesis_amplify_8558c379"
+}

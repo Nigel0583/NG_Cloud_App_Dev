@@ -39,6 +39,10 @@ import './theme/variables.css';
 /* Global styles */
 import './App.css';
 
+import {v4} from 'uuid';
+
+const uuId = v4()
+
 Amplify.configure(awsconfig);
 
 const App: React.FC = () => {

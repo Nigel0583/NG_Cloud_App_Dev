@@ -6,5 +6,11 @@
       "dependsOn": [],
       "customAuth": false
     }
+  },
+  "analytics": {
+    "f1stream": {
+      "service": "Kinesis",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }
