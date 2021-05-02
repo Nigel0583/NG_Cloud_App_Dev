@@ -1,6 +1,6 @@
 {
     "identityPoolName": "testAuthIdentityPool",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "ngcloub2891da4",
     "userPoolName": "NGCloudAppDev",
     "autoVerifiedAttributes": [
