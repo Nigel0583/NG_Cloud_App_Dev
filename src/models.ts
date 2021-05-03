@@ -57,23 +57,7 @@ export interface Race {
   QualifyingResults: QualifyingResult[];
   Results: Result[];
 }
-
-export interface PitStop {
-  driverId: string;
-  lap:      string;
-  stop:     string;
-  time:     string;
-  duration: string;
-}
-
 // Circuit
-
-export interface CircuitTable {
-  season:    string;
-  circuitId: string;
-  Circuits:  Circuit[];
-}
-
 export interface Circuit {
   circuitId:   string;
   url:         string;
@@ -163,7 +147,6 @@ export interface AverageSpeed {
 }
 
 export enum Units {
-  Kph = "kph",
 }
 
 export interface FastestLapTime {
