@@ -22,7 +22,7 @@ const ConstructorResults: React.FC<{season: string, constructorId: string}> = ({
       <IonList lines="full">
         {[...Array(20)].map((item, index) =>
           <IonItem key={index}>
-            <div className="race-position ion-margin-end"></div>
+            <div className="race-position ion-margin-end"/>
             <IonLabel>
               <IonSkeletonText animated style={{ height: '16px', width: '120px' }}/>
             </IonLabel>

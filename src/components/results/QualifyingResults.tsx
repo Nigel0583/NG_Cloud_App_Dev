@@ -16,7 +16,7 @@ const QualifyingResults: React.FC<{season?: string, round?: string}> = ({season,
       <IonList lines="full">
         {[...Array(20)].map((item, index) =>
           <IonItem key={index}>
-            <div className="quali-position ion-margin-end"></div>
+            <div className="quali-position ion-margin-end"/>
             <IonLabel>
               <IonSkeletonText animated style={{ height: '16px', width: '120px' }}/>
             </IonLabel>

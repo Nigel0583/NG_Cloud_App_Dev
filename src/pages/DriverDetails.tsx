@@ -23,7 +23,7 @@ const DriverDetails: React.FC<DriverDetailsProps> = ({match}) => {
       <IonHeader>
           <IonToolbar>
             <IonButtons slot="start">
-              <IonBackButton defaultHref="/standings"></IonBackButton>
+              <IonBackButton defaultHref="/standings"/>
               <IonTitle>Driver</IonTitle>
             </IonButtons>
           </IonToolbar>

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { IonItem, IonLabel, IonList } from '@ionic/react';
-import { Lap } from '../../../models';
-import { CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import React, {useEffect, useState} from 'react';
+import {IonItem, IonLabel, IonList} from '@ionic/react';
+import {Lap} from '../../../models';
+import {CartesianGrid, Line, LineChart, ResponsiveContainer, XAxis, YAxis} from 'recharts';
 
 const Positions: React.FC<{season: string, round: string, driverId: string}> = ({season, round, driverId}) => {
   const [results, setResults] = useState<[Lap] | null>(null);
@@ -15,18 +15,17 @@ const Positions: React.FC<{season: string, round: string, driverId: string}> = (
   const getData = (positions: [Lap]) => {
     let lap: any;
 
-    const data = positions.map(item => {
+    return positions.map(item => {
       lap = {};
       lap['lap'] = item.number;
       item.Timings.forEach(item => lap[item.driverId] = item.position)
       return lap;
     });
-    return data;
   };
 
   if (results === null) {
     return (
-      <div></div>
+      <div/>
     );
   }
   return (

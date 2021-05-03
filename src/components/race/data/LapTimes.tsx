@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { IonBadge, IonItem, IonLabel, IonList } from '@ionic/react';
-import { Lap } from '../../../models';
-import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import React, {useEffect, useState} from 'react';
+import {IonBadge, IonItem, IonLabel, IonList} from '@ionic/react';
+import {Lap} from '../../../models';
+import {Area, AreaChart, ResponsiveContainer, XAxis, YAxis} from 'recharts';
 
 const LapTimes: React.FC<{season: string, round: string, driverId: string}> = ({season, round, driverId}) => {
   const [results, setResults] = useState<[Lap] | null>(null);
@@ -13,18 +13,17 @@ const LapTimes: React.FC<{season: string, round: string, driverId: string}> = ({
   }, [season, round, driverId]);
 
   const getData = (positions: [Lap]) => {
-    const data = positions.map(item => {
+    return positions.map(item => {
       return {
         lap: item.number,
         time: Date.parse(`1970-01-01T00:0${item.Timings[0].time}Z`),
       }
     });
-    return data;
   };
 
   if (results === null) {
     return (
-      <div></div>
+      <div/>
     );
   }
   return (

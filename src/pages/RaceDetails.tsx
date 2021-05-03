@@ -1,8 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { IonContent, IonHeader, IonPage, IonToolbar, IonButtons, IonBackButton, IonSegment, IonSegmentButton, IonLabel, IonTitle, IonSlides, IonSlide, IonGrid, IonRow, IonCol } from '@ionic/react';
 import { RouteComponentProps } from 'react-router';
 import Circuit from '../components/circuit/Circuit/Circuit';
-import { slideOptions } from '../utils/SlideOptions';
 
 interface RaceDetailsProps extends RouteComponentProps<{
   season: string,
@@ -12,47 +11,18 @@ interface RaceDetailsProps extends RouteComponentProps<{
 }> {}
 
 const RaceDetails: React.FC<RaceDetailsProps> = ({match}) => {
-  const [selectedSegment, SetSelectedSegment] = useState<string>('schedule');
-
-  const slider = useRef<HTMLIonSlidesElement>(null);
-
-  const onSegmentChange = (event: CustomEvent) => {
-    SetSelectedSegment(event.detail.value);
-
-    switch(event.detail.value) {
-      case 'schedule':
-        slider.current!.slideTo(0);
-        break;
-      case 'circuit':
-        slider.current!.slideTo(1);
-        break;
-    }
-  }
-
-  const onSlideChange = (event: any) => {
-    event.target.getActiveIndex().then((value: any) => {
-      switch(value) {
-        case 0:
-          SetSelectedSegment('schedule');
-          break;
-        case 1:
-          SetSelectedSegment('circuit');
-          break;
-      }
-    })
-  }
 
   return (
     <IonPage>
     <IonHeader>
       <IonToolbar>
         <IonButtons slot="start">
-          <IonBackButton defaultHref="/races"></IonBackButton>
+          <IonBackButton defaultHref="/races"/>
           <IonTitle>Race</IonTitle>
         </IonButtons>
       </IonToolbar>
       <IonToolbar>
-        <IonSegment onIonChange={onSegmentChange} value={selectedSegment}>
+        <IonSegment>
           <IonSegmentButton value="circuit">
             <IonLabel>Circuit</IonLabel>
           </IonSegmentButton>
@@ -60,7 +30,7 @@ const RaceDetails: React.FC<RaceDetailsProps> = ({match}) => {
       </IonToolbar>
     </IonHeader>
     <IonContent>
-      <IonSlides onIonSlideDidChange={onSlideChange} ref={slider} options={slideOptions}>
+      <IonSlides>
         <IonSlide>
         <IonGrid>
             <IonRow>
