@@ -11,7 +11,7 @@ import {
 } from '@ionic/react';
 import {IonReactRouter} from '@ionic/react-router';
 import {homeOutline, podiumOutline, calendarOutline} from 'ionicons/icons';
-import Latest from './pages/Latest';
+import Comms from './components/comms/Comms';
 import Standings from './pages/Standings';
 import Races from './pages/Races';
 import RaceDetails from './pages/RaceDetails';
@@ -22,6 +22,7 @@ import Amplify from 'aws-amplify';
 import {AmplifyAuthenticator, AmplifySignOut, AmplifySignUp, AmplifySignIn} from '@aws-amplify/ui-react';
 import {AuthState, onAuthUIStateChange} from '@aws-amplify/ui-components';
 import awsconfig from './aws-exports';
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -38,11 +39,7 @@ import './theme/variables.css';
 
 /* Global styles */
 import './App.css';
-
-import {v4} from 'uuid';
-
-const uuId = v4()
-
+require('./ably');
 Amplify.configure(awsconfig);
 
 const App: React.FC = () => {
@@ -77,7 +74,7 @@ const App: React.FC = () => {
                         </IonTabButton>
                     </IonTabBar>
                     <IonRouterOutlet>
-                        <Route path="/latest" component={Latest}/>
+                        <Route path="/latest" component={Comms}/>
                         <Route path="/standings" component={Standings}/>
                         <Route path="/races" component={Races}/>
                         <Route path="/race/:season/:round/:country/:circuit" component={RaceDetails}/>

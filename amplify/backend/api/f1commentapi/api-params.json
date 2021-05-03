@@ -1,0 +1,35 @@
+{
+  "paths": [
+    {
+      "name": "/comment",
+      "lambdaFunction": "f1formula",
+      "privacy": {
+        "open": true
+      },
+      "policyResourceName": "/comment"
+    }
+  ],
+  "resourceName": "f1commentapi",
+  "apiName": "f1commentapi",
+  "functionArns": [
+    {
+      "lambdaFunction": "f1formula"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-amplifyfcdb2361c44a4-staging-103632-authRole",
+    "unAuthRoleName": "amplify-amplifyfcdb2361c44a4-staging-103632-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "f1formula",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

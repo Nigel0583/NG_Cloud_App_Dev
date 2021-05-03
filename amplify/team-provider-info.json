@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "NGCloudAppDev": {}
+      },
+      "function": {
+        "usercommentsTrigger56fee662": {
+          "deploymentBucketName": "amplify-amplifyfcdb2361c44a4-staging-103632-deployment",
+          "s3Key": "amplify-builds/usercommentsTrigger56fee662-6e6f436d316f53433844-build.zip"
+        }
       }
     }
   }

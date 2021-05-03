@@ -1,0 +1,5 @@
+{
+    "tableName": "commentsf1",
+    "partitionKeyName": "date",
+    "partitionKeyType": "S"
+}
