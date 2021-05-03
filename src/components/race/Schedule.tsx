@@ -18,7 +18,7 @@ export interface RaceSession {
 
 
 const Schedule: React.FC<{season: string, round: string}> = ({season, round}) => {
-  let history = useHistory();
+  useHistory();
   const [race, setRace] = useState<Race | null>(null);
   const [raceSchedule, setraceSchedule] = useState<RaceSession | null>(null);
   const { Http } = Plugins;
@@ -40,13 +40,6 @@ const Schedule: React.FC<{season: string, round: string}> = ({season, round}) =>
       setraceSchedule(data.races[parseInt(round) - 1]);
     })
   }, [round, season, Http]);
-
-  const _handleClick = (season: string, round: string, session: string, date: Date) => {
-    if(new Date(date) < new Date()) {
-      history.push(`/results/${season}/${round}/${session}`);
-    }
-  }
-
   if (raceSchedule === null || race === null) {
     return (
       <IonList lines="full">
