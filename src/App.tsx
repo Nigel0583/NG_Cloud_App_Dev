@@ -11,8 +11,7 @@ import {
 } from '@ionic/react';
 import {IonReactRouter} from '@ionic/react-router';
 import {homeOutline, podiumOutline, calendarOutline} from 'ionicons/icons';
-import Latest from './pages/Latest';
-
+import Comms from './components/comms/Comms';
 import Standings from './pages/Standings';
 import Races from './pages/Races';
 import RaceDetails from './pages/RaceDetails';
@@ -75,7 +74,7 @@ const App: React.FC = () => {
                         </IonTabButton>
                     </IonTabBar>
                     <IonRouterOutlet>
-                        <Route path="/latest" component={Latest}/>
+                        <Route path="/latest" component={Comms}/>
                         <Route path="/standings" component={Standings}/>
                         <Route path="/races" component={Races}/>
                         <Route path="/race/:season/:round/:country/:circuit" component={RaceDetails}/>

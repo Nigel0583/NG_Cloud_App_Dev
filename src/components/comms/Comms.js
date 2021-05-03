@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import CommentBox from './CommentBox';
 import Comments from './Comments';
-
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import RacePreview from '../race/RacePreview';
 class Comms extends Component {
     constructor(props) {
         super(props);
@@ -43,16 +44,27 @@ class Comms extends Component {
 
     render() {
         return (
-            <section className="section">
-                <div className="container">
-                    <div className="columns">
-                        <div className="column is-half is-offset-one-quarter">
-                            <CommentBox handleAddComment={this.handleAddComment} />
-                            <Comments comments={this.state.comments} />
+            <IonPage>
+                <IonHeader>
+                    <IonToolbar>
+                        <IonTitle>Home</IonTitle>
+                    </IonToolbar>
+                </IonHeader>
+                <IonContent>
+                    <RacePreview/>
+                    <section className="section">
+                        <div className="container">
+                            <div className="columns">
+                                <div className="column is-half is-offset-one-quarter">
+                                    <CommentBox handleAddComment={this.handleAddComment} />
+                                    <Comments comments={this.state.comments} />
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
+                </IonContent>
+            </IonPage>
+
         );
     }
 }

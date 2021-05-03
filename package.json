@@ -25,6 +25,7 @@
     "amazon-cognito-identity-js": "^4.6.0",
     "aws-amplify": "^3.3.27",
     "aws-amplify-react-native": "^4.3.2",
+    "bulma": "^0.9.2",
     "centra": "^1.0.1",
     "chokidar": "*",
     "grecaptcha": "^1.0.3",
