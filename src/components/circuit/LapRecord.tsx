@@ -6,7 +6,7 @@ import { RaceResult } from '../../models';
 const LapRecord: React.FC<{circuitId?: string}> = ({circuitId}) => {
   const [result, setResult] = useState<RaceResult | null>(null);
 
-  useEffect(() => {
+    useEffect(() => {
     fetch(`https://ergast.com/api/f1/circuits/${circuitId}/fastest/1/results.json`)
       .then(res => res.json())
       .then(result => {

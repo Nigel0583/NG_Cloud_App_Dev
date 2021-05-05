@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import CommentBox from './CommentBox';
 import Comments from './Comments';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar} from '@ionic/react';
 import RacePreview from '../race/RacePreview';
+
 class Comms extends Component {
     constructor(props) {
         super(props);
@@ -23,7 +24,7 @@ class Comms extends Component {
                 /* create a new array with comments */
                 const comments = Array.from(page.items, item => item.data);
 
-                this.setState({ comments });
+                this.setState({comments});
 
                 /* subscribe to new comments */
                 channel.subscribe((msg, err) => {
@@ -56,8 +57,8 @@ class Comms extends Component {
                         <div className="container">
                             <div className="columns">
                                 <div className="column is-half is-offset-one-quarter">
-                                    <CommentBox handleAddComment={this.handleAddComment} />
-                                    <Comments comments={this.state.comments} />
+                                    <CommentBox handleAddComment={this.handleAddComment}/>
+                                    <Comments comments={this.state.comments}/>
                                 </div>
                             </div>
                         </div>

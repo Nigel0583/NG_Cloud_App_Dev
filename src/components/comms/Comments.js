@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Comment from './Comment';
 
 class Comments extends Component {
@@ -7,7 +7,7 @@ class Comments extends Component {
             <section className="section">
                 {
                     this.props.comments.map((comment, index) => {
-                        return <Comment key={index} comment={comment} />
+                        return <Comment key={index} comment={comment}/>
                     })
                 }
             </section>

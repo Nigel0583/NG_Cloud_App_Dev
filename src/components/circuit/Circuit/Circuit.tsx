@@ -53,8 +53,9 @@ const Circuit: React.FC<{ season: string, round: string, circuit: string }> = ({
         <>
             <IonItem lines="none" className="ion-margin-top">
                 <IonThumbnail slot="start">
-                    <IonImg src={`https://bucketofflags103632-staging.s3.amazonaws.com/flags/${race.Circuit.Location.country.replace(' ', '_')}.svg`}
-                            alt={race.Circuit.Location.country}/>
+                    <IonImg
+                        src={`https://bucketofflags103632-staging.s3.amazonaws.com/flags/${race.Circuit.Location.country.replace(' ', '_')}.svg`}
+                        alt={race.Circuit.Location.country}/>
                 </IonThumbnail>
                 <IonLabel>
                     <h2 className="font-weight-bold">{race.Circuit.circuitName}</h2>
@@ -64,10 +65,11 @@ const Circuit: React.FC<{ season: string, round: string, circuit: string }> = ({
             <FirstGP circuitId={race.Circuit.circuitId}/>
             <LapNumber circuitId={race.Circuit.circuitId}/>
             <LapRecord circuitId={race.Circuit.circuitId}/>
-            <p  className=" ion-padding ion-text-left">{description}</p>
+            <p className=" ion-padding ion-text-left">{description}</p>
             <IonCard className="track-card">
                 <IonCardContent>
-                    <IonImg className="track ion-padding" src={`https://bucketofflags103632-staging.s3.amazonaws.com/tracks/${race.Circuit.circuitId}.svg`}/>
+                    <IonImg className="track ion-padding"
+                            src={`https://bucketofflags103632-staging.s3.amazonaws.com/tracks/${race.Circuit.circuitId}.svg`}/>
                 </IonCardContent>
             </IonCard>
 

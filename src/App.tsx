@@ -39,6 +39,7 @@ import './theme/variables.css';
 
 /* Global styles */
 import './App.css';
+
 require('./ably');
 Amplify.configure(awsconfig);
 

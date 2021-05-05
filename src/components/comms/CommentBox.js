@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 class CommentBox extends Component {
     constructor(props) {
@@ -17,7 +17,7 @@ class CommentBox extends Component {
 
         // Make sure name and comment boxes are filled
         if (name && comment) {
-            const commentObject = { name, comment };
+            const commentObject = {name, comment};
 
             // Publish comment
             /*global Ably*/
